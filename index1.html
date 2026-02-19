@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hourly Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>⏰ Hour-wise Attendance Monitor</h1>
+
+    <div class="stats">
+        <div class="card">
+            <h3>Today's %</h3>
+            <p id="todayPercent">0%</p>
+        </div>
+        <div class="card">
+            <h3>Overall %</h3>
+            <p id="overallPercent">0%</p>
+        </div>
+    </div>
+
+    <div class="form-box">
+        <select id="hour">
+            <option value="">Select Hour</option>
+        </select>
+
+        <select id="status">
+            <option value="">Select Status</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="Break">Break</option>
+        </select>
+
+        <button onclick="markAttendance()">Mark</button>
+    </div>
+
+    <h2>📅 Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Hour</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="records"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+    </html>
